@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char s[100];
+    cout << "Vvedite primer: \n";
+    cin >> s;
+    int per,two,obch;
+    char h[20];
+    char k[20];
+    char j;
+    char o;
+    int f=0;
+    int l=0;
+    bool ten=false;
+    bool six=false;
+    bool joke=false;
+    bool one=false;
+    bool i =false;
+    if(i==false)
+    for(int i=0;i<=100;i++)
+    {
+        if(ten==false)
+        {
+        if(isdigit(s[i]))
+        {
+            h[f]=s[i];
+            f+=1;
+        }
+        else
+        {
+            j=s[i];
+            ten=true;
+            six=true;
+        }
+        }
+        if(six==true)
+        {
+            if(isdigit(s[i]))
+            {
+                k[l]=s[i];
+                l+=1;
+            }
+            else 
+            {
+                o=s[i];
+                six=false;
+                joke=true;
+            }
+        }
+        if(joke==true)
+        {
+            if(one=false)
+            {
+            per=atoi(h);
+            }
+            two=atoi(k);
+            switch(j)
+            {
+            case '+': if(one ==false) obch=per+two;else obch+=two;break;
+            case '-': if(one ==false) obch=per-two;else obch-=two;
+            case '*': if(one ==false) obch=per*two;else obch*=two;
+            case '/': if(one ==false) obch=per/two;else obch/=two;
+            case '=': cout << obch;i=true;break;
+            }
+            one=true;
+        }
+        cout << obch;
+    }
+    cin.get();
+    cin.get();
+    cin.get();
+}
